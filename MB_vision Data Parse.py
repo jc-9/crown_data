@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 from datetime import date
 
 # Input File Path of the CSV File and press go!
+# @ April - I needed to add two backslashes '\\' to the file path in order to get the file to read
 file = 'C:\\Users\melma\PycharmProjects\Plot\Data_logs\JUUL_2021-02-04T1116.csv'
 
 col_list = [
@@ -206,7 +207,8 @@ fig = plt.figure(figsize=(11, 11))
 
 fig2 = plt.figure(figsize=(11, 11))
 
-# fig.suptitle(f'MB Vision Analysis, n={rows} \n {file.split("/")[3]}')
+# Comment out this line, not compataible with other file systems
+fig.suptitle(f'MB Vision Analysis, n={rows}')
 
 ax1 = fig.add_subplot(521)
 
